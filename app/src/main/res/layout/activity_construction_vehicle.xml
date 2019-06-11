@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.glens.speech.activity.ConstructionVehicleActivity">
+
+    <LinearLayout
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/black"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/vehicle_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/icon_back"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:text="车辆预警识别"/>
+
+    </LinearLayout>
+
+    <!--<RelativeLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:background="#EDEDED"-->
+        <!--android:orientation="horizontal">-->
+
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:text="@string/select_img"-->
+            <!--android:textSize="24sp"-->
+            <!--android:layout_marginStart="10dp"-->
+            <!--android:gravity="center"/>-->
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:text="@string/more_img"-->
+            <!--android:textSize="24sp"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_marginEnd="20dp"-->
+            <!--android:layout_marginStart="10dp"-->
+            <!--android:gravity="center"/>-->
+    <!--</RelativeLayout>-->
+
+    <GridView
+        android:id="@+id/gridview"
+        android:layout_below="@id/title_bar"
+        android:layout_marginTop="10dp"
+        android:divider="@null"
+        android:numColumns="2"
+        android:cacheColorHint="@android:color/transparent"
+        android:verticalSpacing="10dp"
+        android:horizontalSpacing="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </GridView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="#EDEDED"
+        >
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:text="@string/intelligent"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@color/colorPrimary"
+            android:textColor="@color/white"
+            />
+    </LinearLayout>
+
+
+</RelativeLayout>

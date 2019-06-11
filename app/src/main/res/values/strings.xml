@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">智能电网</string>
+    <string name="welcome_app">欢迎进入电力智能语音助手</string>
+    <string name="safety_enquiry">安规查询</string>
+    <string name="power_transmission_specialty">输电专业</string>
+    <string name="district_manager">台区经理</string>
+    <string name="face_recognition">人脸识别</string>
+    <string name="construction_vehicle">工程车辆</string>
+    <string name="bottom_text">基于GLENS-AI引擎及电力样本库1.0</string>
+    <string name="request_question">您可以这样问我</string>
+    <string name="request_info">\"查询台账任上5238线002号杆\"</string>
+    <string name="question_describe">问题描述</string>
+
+    <string name="send_voice_need_sdcard_support">发送语音需要sdcard支持</string>
+    <string name="the_recording_time_is_too_short">录音时间太短</string>
+
+    <string name="tips_welcome">您好,\n请直接按下方按钮,\n进行关键字识别~</string>
+    <string name="word_speak">根据您的说话,我们为您提炼出以下关键词:</string>
+    <string name="select_img">选择照片</string>
+    <string name="more_img">更多照片</string>
+    <string name="intelligent">人工智能</string>
+</resources>

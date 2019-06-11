@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_bg"
+    tools:context="com.glens.speech.activity.SafetyEnquiryActivity">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/manager_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:text="@string/tips_welcome"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:lineSpacingExtra="6dp"
+        android:layout_marginTop="200dp"/>
+
+    <LinearLayout
+        android:id="@+id/ll_manager_main"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:visibility="visible"
+        android:layout_marginBottom="50dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1">
+            <ImageView
+                android:id="@+id/iv_manager_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/back"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1">
+            <ImageView
+                android:id="@+id/iv_manager_sound_recording"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/sound_recording"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1">
+            <ImageView
+                android:id="@+id/iv_manager_all_question"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/all_question"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.glens.speech.utils.MyGifView
+        android:id="@+id/iv_manager_gif"
+        android:layout_height="80dp"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:visibility="invisible"
+        />
+</RelativeLayout>
