@@ -51,9 +51,8 @@ public class ConstructionVehicleActivity extends AppCompatActivity {
 
     private void initData() {
         list = new ArrayList<>();
-        for (int i = 0; i < 10; i++) {
-            list.add(url);
-        }
+        list.add("http://121.199.79.99:8889/group1/M00/07/B5/ecdPY10ATqiAEgVtAAlWauHGb2I58..jpg");
+        list.add("http://121.199.79.99:8889/group1/M00/07/B5/ecdPY10ATq6AAuQNAAiGO1lUf-c72..jpg");
         checkList = new ArrayList<>();
         adapter = new ImageAdapter(ConstructionVehicleActivity.this, list);
     }

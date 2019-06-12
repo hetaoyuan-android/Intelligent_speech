@@ -245,7 +245,8 @@ public class DistrictManagerActivity extends AppCompatActivity {
                                 }
                             }
 
-                            String url = "http://172.16.2.132:8080/pmsWeb/eap/pmsServices/transmission/voice/getVoiceResult?searchName=";
+//                            String url = "http://172.16.2.132:8080/pmsWeb/eap/pmsServices/transmission/voice/getVoiceResult?searchName=";
+                            String url = "http://172.16.2.76:8080/olis/eap/demo/getMessage?param=";
                             Log.i("url + speechWords", "url + speechWords" + url + speechWords);
                             // 网络请求数据
                             HttpUtil.sendRequestWithOkhttp(url + speechWords, new Callback() {
@@ -273,7 +274,7 @@ public class DistrictManagerActivity extends AppCompatActivity {
                                                     public void run() {
                                                         //文字理解并回复文字
                                                         //接收消息
-                                                        DialogMessage msgAccept = new DialogMessage(message, DialogMessage.TYPE_RECEIVED);
+                                                        DialogMessage msgAccept = new DialogMessage(format(message), DialogMessage.TYPE_RECEIVED);
                                                         msgList.add(msgAccept);
                                                         //通知列表有新数据插入 这样数据才能在recyclerview中显示
 
@@ -286,7 +287,7 @@ public class DistrictManagerActivity extends AppCompatActivity {
                                                     }
 
                                                 });
-                                                Boolean flag2 = WordsToSpeech.speech(message);
+                                                Boolean flag2 = WordsToSpeech.speechManager(message);
                                                 if (flag2) {
                                                     // 播放语音：
                                                     // path : 文件路径
@@ -299,7 +300,7 @@ public class DistrictManagerActivity extends AppCompatActivity {
                                                     public void run() {
                                                         //文字理解并回复文字
                                                         //接收消息
-                                                        DialogMessage msgAccept = new DialogMessage(errMessage, DialogMessage.TYPE_RECEIVED);
+                                                        DialogMessage msgAccept = new DialogMessage(format(errMessage), DialogMessage.TYPE_RECEIVED);
                                                         msgList.add(msgAccept);
                                                         //通知列表有新数据插入 这样数据才能在recyclerview中显示
 
@@ -314,8 +315,8 @@ public class DistrictManagerActivity extends AppCompatActivity {
 
                                                 });
 
-                                                Boolean flag1 = WordsToSpeech.speech(errMessage);
-                                                // flag == true, 转换成功， 得到的语音文件固定存放在手机路径： /sdcard/dw_answer/speech.wav
+                                                Boolean flag1 = WordsToSpeech.speechManager(errMessage);
+                                                // flag == true, 转换成功， 得到的语音文件固定存放在手机路径： /sdcard/dw_answer/manager.wav
                                                 // flag == false， 转换失败
                                                 if (flag1) {
                                                     // 播放语音：

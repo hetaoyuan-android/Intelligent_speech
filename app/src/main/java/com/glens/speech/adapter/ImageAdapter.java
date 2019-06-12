@@ -48,7 +48,6 @@ public class ImageAdapter extends BaseAdapter {
             convertView = LayoutInflater.from(mContext).inflate(R.layout.item_layout_img, null);
             viewHolder = new ViewHolder();
             viewHolder.imageView = convertView.findViewById(R.id.iv_img);
-            viewHolder.checkBox = convertView.findViewById(R.id.cb_item);
             Glide.with(mContext).load(urls.get(position)).centerCrop()
                     .placeholder(R.mipmap.ic_launcher).into(viewHolder.imageView);
             convertView.setTag(viewHolder);
@@ -56,7 +55,6 @@ public class ImageAdapter extends BaseAdapter {
             viewHolder = (ViewHolder) convertView.getTag();
             if (urls != null && urls.size() > 0) {
                 viewHolder.imageView = convertView.findViewById(R.id.iv_img);
-                viewHolder.checkBox = convertView.findViewById(R.id.cb_item);
                 Glide.with(mContext).load(urls.get(position)).centerCrop()
                         .placeholder(R.mipmap.ic_launcher).into(viewHolder.imageView);
             }
@@ -67,6 +65,5 @@ public class ImageAdapter extends BaseAdapter {
 
     class ViewHolder{
         ImageView imageView;
-        CheckBox checkBox;
     }
 }
